@@ -2,16 +2,19 @@
   "name": "graphql-com-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -e js,gql"
+    "start": "tsnd --respawn --transpile-only src/index.ts",
+    "start-other": "sucrase-node src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "sucrase": "^3.17.1",
+    "ts-node-dev": "^1.1.1"
   },
   "dependencies": {
     "apollo-datasource-rest": "^0.10.0",
